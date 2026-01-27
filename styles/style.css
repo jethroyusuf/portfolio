@@ -1,0 +1,193 @@
+/* GENERAL */
+*{
+    background-color: rgb(20, 19, 19);
+    color: white;
+    font-family: "Manrope", sans-serif;
+}
+body{
+    padding: 25px 70px;
+}
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    margin: auto;
+}
+ul{
+    display: flex;
+    gap: 25px;
+    list-style-type: none;
+}
+ul a, .logo{
+    text-decoration: none;
+}
+.nav-items{
+    align-self: center;    
+}
+.logo{
+    font-size: 20px;
+}
+.nav-github{
+    font-size: 35px;
+}
+a:hover, .nav-github:hover {
+    color: #A6BBCC;
+}
+.logo-con{
+    display: inline;
+}
+/* HERO */
+#hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0 80px;
+    min-height: 100vh;
+}
+.hero-text h1{
+    font-size: 70px;
+    font-weight: bold;
+    color: #A6BBCC;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.hero-text p{
+    font-size: 18px;
+    margin-bottom: 1px;
+}
+.contact-link{
+    display: inline;
+    margin-top: 0;
+}
+.hero-img img{
+     width: 100%;
+    max-width: 600px;      /* limit on large screens */
+    height: auto;          /* keep aspect ratio */
+    max-height: 70vh;      /* don't exceed viewport height */
+    object-fit: cover;
+    border-radius: 50px;
+    display: block;
+}
+/* ABOUT */
+.about-header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.about-header hr{
+    flex: 1;
+    border: none;
+    border-top: 2px solid #A6BBCC;
+}
+.about-header h2{
+    font-weight: bold;
+    color: #A6BBCC;
+    font-size: 50px;
+    margin: 0;
+}
+.about-text{
+    width: 60%;
+    margin: auto;
+    line-height: 30px;
+}
+.about-skills{
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+.about-skills h3{
+    font-size: 30px;
+    margin: 0;
+}
+.about-skills p{
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+/* WORK */
+.design-port {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.design-port > div {
+  width: 48%;
+}
+
+.design-port img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.work-design > div{
+    margin-left: 20px;
+}
+.work-design h3{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.work-design p{
+    font-size: 10px;
+    margin: 0;
+}
+.work-sec{
+    margin-top: 80px;
+}
+/* CONTACT */
+.contact-me{
+    margin-top: 50px;
+}
+form{
+    width: 748px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 70px;
+    gap: 40px;
+}
+label{
+    opacity: 0.3;
+    font-size: 13px;
+}
+input, textarea, button{
+    border: none;
+    border-bottom: 1px solid #A6BBCC;
+}
+form div{
+    margin: auto;
+}
+button{
+    padding: 15px 30px;
+}
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.footer-icons{
+    font-size: 40px;
+}
+/* RESPONSIVENESS */
+ @media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 50px;
+    }
+    .hero-img img {
+        max-width: 100%;
+        max-height: 50vh;
+    }
+} 
