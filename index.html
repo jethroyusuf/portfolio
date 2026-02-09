@@ -17,7 +17,6 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <script src="/script.js"></script>
     <!-- NAVBAR -->
     <header>
       <nav>
@@ -40,7 +39,7 @@
     <section id="hero">
       <div class="hero-text">
         <p>Hello, I'm Yusuf,</p>
-        <h1>Full stack Developer</h1>
+        <h1 id="hero-text">Full stack Developer</h1>
         <a href="#contact" class="contact-link">Contact Me</a>
       </div>
       <div class="hero-img">
@@ -122,15 +121,15 @@
       </p>
       <form action="">
         <label for="name">NAME</label>
-        <input type="text" />
+        <input type="text" id="name"/>
 
         <label for="email">EMAIL</label>
-        <input type="email" />
+        <input type="email" id="email"/>
 
         <label for="message">MESSAGE</label>
         <textarea name="" id="message" cols="80" rows="7"></textarea>
         <div>
-          <button>SEND MESSAGE</button>
+          <button id="contactme">SEND MESSAGE</button>
         </div>
       </form>
     </section>
@@ -154,5 +153,6 @@
         ></a>
       </div>
     </footer>
+    <script src="/script.js"></script>
   </body>
 </html>
