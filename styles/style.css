@@ -272,6 +272,7 @@ footer{
     margin-top: 100px;
     gap: 20px;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 .footer-icons{
     font-size: 40px;
@@ -338,6 +339,10 @@ footer{
 
   .about-skills{
     justify-content: center;
+  }
+
+  .footer-icons {
+    font-size: 30px;
   }
 
   /* center main content but keep nav left aligned if needed */
