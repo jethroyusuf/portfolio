@@ -417,6 +417,10 @@ footer{
     display: block; /*displays hamburger*/
   }
 
+  .footer-icons {
+    font-size: 20px;
+  }
+
   /* hamburger animation to make the topand bottom bar cross to x and the middle bar disappear */
   .nav-hamburger.active .bar:nth-child(2) {
     opacity: 0;  /*removes the second bar*/          
