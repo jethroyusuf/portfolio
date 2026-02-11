@@ -385,10 +385,6 @@ footer{
     padding: 15px;
   }
 
-  nav {
-    position: static;
-  }
-
   nav ul {
     gap: 8px;
     flex-wrap: wrap;

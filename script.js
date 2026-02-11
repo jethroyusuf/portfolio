@@ -34,5 +34,5 @@ document.querySelectorAll('.nav-link').forEach(function(n) {    //can also be wr
     n.addEventListener('click', function(){
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
-    })
+    }) 
 })
