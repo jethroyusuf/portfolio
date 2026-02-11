@@ -25,12 +25,13 @@ body{
     width: 90%;
     -webkit-font-smoothing: antialiased;
 }
-a{
+a, button{
     color: white;
+    transition: 0.7s ease;
 }
 
 /* NAVBAR */
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,19 +41,31 @@ nav{
     margin: auto;
     gap: var(--gap);
     z-index: 50;
+    padding: 0 1rem;
 }
-ul{
+ul {
     display: flex;
     gap: 25px;
     list-style-type: none;
     align-items: center;
     flex-wrap: wrap;
 }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex: 1;                 /* take available space */
+  justify-content: center; /* keep items centered */
+}
+
 ul a, .logo{
     text-decoration: none;
     color: inherit;
 }
-.nav-items{
+.nav-logo{
     align-self: center;    
 }
 .logo{
@@ -62,11 +75,26 @@ ul a, .logo{
 .nav-github{
     font-size: 35px;
 }
-a:hover, .nav-github:hover {
+
+a:hover, .nav-github:hover, button:hover {
     color: var(--muted);
 }
 .logo-con{
     display: inline;
+}
+
+.nav-hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+
 }
 
 /* HERO (accept both id and class) */
@@ -75,7 +103,7 @@ a:hover, .nav-github:hover {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding-top: 0;
+    padding: 80px;
     min-height: 80vh;
     flex-wrap: wrap;
 }
@@ -254,7 +282,7 @@ footer{
 }
 
 /* Tablets & small laptops */
-@media (max-width: 992px) {
+@media (max-width: 1022px) {
   #hero, .hero {
     flex-direction: column;
     text-align: center;
@@ -312,12 +340,53 @@ footer{
   .hero-text, .about-text, .work-sec {
     text-align: center;
   }
+  .nav-hamburger {
+    display: block; /*displays hamburger*/
+  }
+
+  /* hamburger animation to make the topand bottom bar cross to x and the middle bar disappear */
+  .nav-hamburger.active .bar:nth-child(2) {
+    opacity: 0;  /*removes the second bar*/          
+  }
+  
+  .nav-hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);   /*brings the top bar to the middle and tilts it to 45deg*/
+  }
+
+  .nav-hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);   /*brings the bottom bar to the middle and tilts it to 45deg*/
+  }
+
+  /*  */
+  .nav-menu {
+    position: fixed; /*ensures the menu remains on the screen when you scroll down untill you click any link*/
+    right: -100%;  /* hiding the menue from view*/
+    top: 70px;
+    gap: 0;
+    flex-direction: column; /* the links in the menu are arranged in collumn*/
+    background-color: var(--bg);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-item {
+    margin: 16px 0; /* to give space betwwen each links*/
+  }
+
+  .nav-menu.active {
+    right: 0;   /*when nav-menu is activated it displays the hiding menu*/
+  }
 }
 
 /* Small mobile devices */
 @media (max-width: 530px) {
   body {
     padding: 15px;
+  }
+
+  nav {
+    position: static;
   }
 
   nav ul {
@@ -333,7 +402,7 @@ footer{
     font-size: 16px;
   }
   .hero-img img {
-    width: 200px;
+    width: 350px;
     max-width: 70%;
   }
 
@@ -343,5 +412,44 @@ footer{
     align-items: center;
     text-align: center;
   }
+
+  .nav-hamburger {
+    display: block; /*displays hamburger*/
+  }
+
+  /* hamburger animation to make the topand bottom bar cross to x and the middle bar disappear */
+  .nav-hamburger.active .bar:nth-child(2) {
+    opacity: 0;  /*removes the second bar*/          
+  }
+  
+  .nav-hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);   /*brings the top bar to the middle and tilts it to 45deg*/
+  }
+
+  .nav-hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);   /*brings the bottom bar to the middle and tilts it to 45deg*/
+  }
+
+  /*  */
+  .nav-menu {
+    position: fixed; /*ensures the menu remains on the screen when you scroll down untill you click any link*/
+    right: -100%;  /* hiding the menue from view*/
+    top: 70px;
+    gap: 0;
+    flex-direction: column; /* the links in the menu are arranged in collumn*/
+    background-color: var(--bg);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-item {
+    margin: 16px 0; /* to give space betwwen each links*/
+  }
+
+  .nav-menu.active {
+    right: 0;   /*when nav-menu is activated it displays the hiding menu*/
+  }
+
 }
 
