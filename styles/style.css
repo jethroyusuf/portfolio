@@ -247,6 +247,10 @@ input, textarea, button{
     width: 100%;
     font: inherit;
 }
+
+input, textarea {
+    outline: none;
+}
 textarea{
     min-height: 120px;
     resize: vertical;
