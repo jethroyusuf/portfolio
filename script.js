@@ -10,14 +10,14 @@
 
 
 // alert message for email, name and message input
-let button = document.getElementById('contactme');
-let nameInput = document.getElementById('name');
-let emailInput = document.getElementById('email');
-let messageInput = document.getElementById('message');
+// let button = document.getElementById('contactme');
+// let nameInput = document.getElementById('name');
+// let emailInput = document.getElementById('email');
+// let messageInput = document.getElementById('message');
 
-button.addEventListener('click', function(){
-    alert('My name is ' + nameInput.value + '\n' + 'And my email is ' + emailInput.value  + '\n' + 'This is my message. ' + messageInput.value)
-});
+// button.addEventListener('click', function(){
+//     alert('My name is ' + nameInput.value + '\n' + 'And my email is ' + emailInput.value  + '\n' + 'This is my message. ' + messageInput.value)
+// });
 
 
 // Activating the Hamburger 
