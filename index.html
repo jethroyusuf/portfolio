@@ -129,12 +129,11 @@
         <input id="name" type="text" name="name" required/>
 
         <label for="email">EMAIL</label>
-        <input id="email" type="email" required/>
+        <input id="email" type="email" name="_replyto" required/> <!-- the _replyto basically helps to send my reply email directly to the sender of the email -->
 
         <label for="message">MESSAGE</label>
         <textarea name="message" id="message" cols="80" rows="7"></textarea>
 
-         <!-- basically helps to send my reply email directly to the sender of the email -->
         <input type="hidden" name="_next" value="https://portfolio-ten-rust-75.vercel.app/thanks.html"> <!-- after submit buuton it takes the user to a thank you page-->
         <input type="hidden" name="_subject" value="New submission! - Portfolio"> <!-- basically gives the incoming email a particular title subject -->
         <input type="hidden" name="_captcha" value="false"> <!--disable captcha-->
