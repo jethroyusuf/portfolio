@@ -394,6 +394,15 @@ footer{
     padding: 15px;
   }
 
+   #hero, .hero {
+    padding: 40px 0; /* Remove horizontal padding */
+  }
+
+  nav {
+    padding: 0; /* Remove nav padding on small screens */
+  }
+
+
   nav ul {
     gap: 8px;
     flex-wrap: wrap;
@@ -408,7 +417,7 @@ footer{
   }
   .hero-img img {
     width: 350px;
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .about-skills{
