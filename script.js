@@ -1,3 +1,25 @@
+// let button = document.getElementById('contactme');
+// let nameInput = document.getElementById('name');
+// let emailInput = document.getElementById('email');
+// let body = document.querySelector('body')
+
+// button.addEventListener('click', function() {
+//  alert('my name is ' + nameInput.value + ' ' + emailInput.value) 
+//  body.style.backgroundColor = 'brown'
+// });
+
+
+// alert message for email, name and message input
+// let button = document.getElementById('contactme');
+// let nameInput = document.getElementById('name');
+// let emailInput = document.getElementById('email');
+// let messageInput = document.getElementById('message');
+
+// button.addEventListener('click', function(){
+//     alert('My name is ' + nameInput.value + '\n' + 'And my email is ' + emailInput.value  + '\n' + 'This is my message. ' + messageInput.value)
+// });
+
+
 // ── Hamburger Menu ──────────────────────────────────────────
 const hamburger = document.querySelector('.nav-hamburger');
 const navMenu = document.querySelector('.nav-menu');
@@ -97,12 +119,18 @@ document.querySelectorAll('.nav-link').forEach(function (n) {
         }
     });
 
-    // Click side cards to navigate
+    // Click side cards to navigate; only let center card follow its link
     cards.forEach(function (card) {
-        card.addEventListener('click', function () {
+        card.addEventListener('click', function (e) {
             const pos = parseInt(card.getAttribute('data-pos'));
-            if (pos === -1 || pos === -2) prev();
-            else if (pos === 1 || pos === 2) next();
+            if (pos === -1 || pos === -2) {
+                e.preventDefault();
+                prev();
+            } else if (pos === 1 || pos === 2) {
+                e.preventDefault();
+                next();
+            }
+            // pos === 0 (center): do nothing — link fires normally
         });
     });
 

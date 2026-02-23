@@ -191,6 +191,38 @@ a:hover, .nav-github:hover, button:hover {
     margin-top: 80px;
 }
 
+/* WORK - original grid layout (kept for reference) */
+/* .design-port {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.design-port > div {
+  width: 48%;
+  min-width: 260px;
+  flex: 1 1 48%;
+}
+
+.design-port img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.work-design > div{
+    margin-left: 20px;
+}
+.work-design h3{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.work-design p{
+    font-size: 10px;
+    margin: 0;
+} */
+
 /* ── CAROUSEL ─────────────────────────────────────────────── */
 .carousel-wrapper {
     position: relative;
@@ -209,6 +241,15 @@ a:hover, .nav-github:hover, button:hover {
     position: relative;
     height: 340px;
     transition: none;
+}
+
+/* Anchor inside card - fills card without breaking layout */
+.carousel-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 /* Each card */
