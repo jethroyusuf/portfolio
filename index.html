@@ -34,7 +34,7 @@
           <span class="bar"></span>
         </div>
         <div class="nav-logo">
-          <a href="https://github.com/jethroyusuf" target="_blank" 
+          <a href="https://github.com/jethroyusuf" target="_blank"
             ><i class="fa-brands fa-github nav-github"></i>
           </a>
         </div>
@@ -58,7 +58,7 @@
         <hr />
       </div>
       <p class="about-text">
-        I’m a passionate full-stack developer with a strong interest in building
+        I'm a passionate full-stack developer with a strong interest in building
         clean, responsive, and user-friendly web applications. I enjoy turning
         ideas into functional digital experiences using modern web technologies.
         <br />
@@ -97,21 +97,53 @@
         HTML, CSS, and JavaScript to reinforce core front-end development
         concepts.
       </p>
-      <div class="design-port">
-        <div class="work-design">
-          <img src="./images/Port1.png" alt="" />
-          <div>
-            <h3>DESIGN PORTFOLIO</h3>
-            <p>HTML CSS JAVASCRIPT</p>
+
+      <!-- CAROUSEL -->
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <img src="./images/Port1.png" alt="Project 1" />
+            <div class="carousel-info">
+              <h3>DESIGN PORTFOLIO</h3>
+              <p>HTML CSS JAVASCRIPT</p>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="./images/Port1.png" alt="Project 2" />
+            <div class="carousel-info">
+              <h3>DESIGN PORTFOLIO</h3>
+              <p>HTML CSS JAVASCRIPT</p>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="./images/Port1.png" alt="Project 3" />
+            <div class="carousel-info">
+              <h3>DESIGN PORTFOLIO</h3>
+              <p>HTML CSS JAVASCRIPT</p>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="./images/Port1.png" alt="Project 4" />
+            <div class="carousel-info">
+              <h3>DESIGN PORTFOLIO</h3>
+              <p>HTML CSS JAVASCRIPT</p>
+            </div>
+          </div>
+          <div class="carousel-card">
+            <img src="./images/Port1.png" alt="Project 5" />
+            <div class="carousel-info">
+              <h3>DESIGN PORTFOLIO</h3>
+              <p>HTML CSS JAVASCRIPT</p>
+            </div>
           </div>
         </div>
-        <div class="work-design">
-          <img src="./images/Port1.png" alt="" />
-          <div>
-            <h3>DESIGN PORTFOLIO</h3>
-            <p>HTML CSS JAVASCRIPT</p>
-          </div>
-        </div>
+
+        <!-- Prev / Next buttons -->
+        <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Previous">&#8249;</button>
+        <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Next">&#8250;</button>
+
+        <!-- Dots -->
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </section>
     <!-- CONTACT -->
@@ -122,21 +154,21 @@
       </div>
       <p class="about-text">
         I would love to hear about your project and how I can help. Please fill
-        in the form, and I’ll get back to you as soon as possible.
+        in the form, and I'll get back to you as soon as possible.
       </p>
       <form action="https://formsubmit.co/yusuf011701@gmail.com" method="post">
         <label for="name">NAME</label>
         <input id="name" type="text" name="name" required/>
 
         <label for="email">EMAIL</label>
-        <input id="email" name="_replyto" type="email" required/> <!-- the _replyto basically helps to send my reply email directly to the sender of the email -->
+        <input id="email" name="_replyto" type="email" required/>
 
         <label for="message">MESSAGE</label>
         <textarea name="message" id="message" cols="80" rows="7"></textarea>
 
-        <input type="hidden" name="_next" value="https://portfolio-ten-rust-75.vercel.app/thanks.html"> <!-- after submit buuton it takes the user to a thank you page-->
-        <input type="hidden" name="_subject" value="New submission! - Portfolio"> <!-- basically gives the incoming email a particular title subject -->
-        <input type="hidden" name="_captcha" value="false"> <!--disable captcha-->
+        <input type="hidden" name="_next" value="https://portfolio-ten-rust-75.vercel.app/thanks.html">
+        <input type="hidden" name="_subject" value="New submission! - Portfolio">
+        <input type="hidden" name="_captcha" value="false">
         <div>
           <button id="contactme">SEND MESSAGE</button>
         </div>
